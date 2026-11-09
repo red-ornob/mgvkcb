@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "red-ornob",
+  "classifications": ["Solution", "MonoGame", "User"],
+  "identity": "red-ornob.MGVKCB.Template",
+  "name": "MonoGame Vulkan Game with Content Builder",
+  "description": "MonoGame Cross-Platform Desktop Vulkan template with updated new Content Builder and packages like MonoGame.Extended, Gum and ShadowDusk preinstalled.",
+  "shortName": "mgvkcb",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "sourceName": "mgvkcbgame",
+  "preferNameDirectory": true,
+  "defaultName": "MyGame",
+  "sources": [
+    {
+      "modifiers": [
+        { "exclude": ["**/bin/**", "**/obj/**", ".git/**", ".vs/**", ".idea/**"] }
+      ]
+    }
+  ]
+}
