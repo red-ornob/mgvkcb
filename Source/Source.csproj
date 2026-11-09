@@ -29,8 +29,14 @@
     <UpToDateCheckInput Include="..\Content\Assets\**\*" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Content\GumUI\**\*.*" Link="Content\GumUI\%(RecursiveDir)%(Filename)%(Extension)">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Gum.MonoGame" Version="2026.11.2.1" />
     <PackageReference Include="Gum.Shapes.MonoGame" Version="2026.11.2.1" />
+    <PackageReference Include="KernSmith.MonoGameGum" Version="2026.11.2.1" />
     <PackageReference Include="MonoGame.Extended" Version="6.1.1" />
     <PackageReference Include="MonoGame.Framework.Native" Version="3.8.6.1" />
     <PackageReference Include="MonoGame.Runtime.Windows.Vulkan" Version="3.8.6.1" />

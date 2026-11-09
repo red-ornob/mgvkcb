@@ -2,8 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Gum;
-using Gum.Forms;
-using Gum.Forms.Controls;
+using Gum.Managers;
 
 namespace Source;
 
@@ -23,8 +22,12 @@ public class mgvkcbgame : Game
     
     protected override void Initialize()
     {
-        GumUI.Initialize(this);
+        GumUI.Initialize(this, "GumUI/GumUI.gumj");
         Gum.Renderables.ShapeRenderer.Self.Initialize();
+        Gum.Wireframe.CustomSetPropertyOnRenderable.InMemoryFontCreator = new KernSmith.Gum.KernSmithFontCreator(GraphicsDevice);
+        
+        var screen = ObjectFinder.Self.GumProjectSave.Screens[0].ToGraphicalUiElement();          
+        screen.AddToRoot();
         
         base.Initialize();
     }

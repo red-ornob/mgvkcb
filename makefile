@@ -1,6 +1,10 @@
 PROJECT := Source/Source.csproj
+GUM := Content/GumUI/GumUI.gumj
 
-.PHONY: init run test debug release publish-linux publish-windows publish clean distclean reset
+.PHONY: init run gum test debug release publish-linux publish-windows publish clean distclean reset
+
+gum:
+	gum $(GUM)
 
 init:
 	dotnet restore
